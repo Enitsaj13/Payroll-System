@@ -1,0 +1,51 @@
+id,name,email,contact,date_hired,address,department,position,employee_type
+1,Lucila Breedy,lbreedy0@123-reg.co.uk,8136343166,27-01-2022,8508 Truax Lane,IT_Department,Department Secretary,Contractual
+2,Germayne Alder,galder1@guardian.co.uk,2485360742,03-06-2022,7449 Haas Junction,IT_Department,Project Manager,Consultant
+3,Violette Culy,vculy2@jigsy.com,3164129200,22-02-2022,7116 Meadow Ridge Place,Head_Office,DB Admin,Regular
+4,Malva Tallon,mtallon3@ftc.gov,3386208049,20-06-2022,730 Fairfield Alley,Sales,Head Accountant,Contractual
+5,Nowell Loveless,nloveless4@house.gov,3151288919,03-07-2022,04498 Old Gate Lane,Head_Office,Head Accountant,Part-time
+6,Mattias Klaggeman,mklaggeman5@nps.gov,2385311998,11-04-2022,47 Brown Road,Sales,Junior Accountant,Regular
+7,Codi Macilhench,cmacilhench6@hhs.gov,5013220214,26-12-2021,000 Moulton Circle,Accountant,Sales Manager,Contractual
+8,Zackariah Sacchetti,zsacchetti7@tmall.com,3158746497,09-05-2022,7159 Grim Parkway,IT_Department,Head Accountant,Contractual
+9,Catha Butner,cbutner8@usda.gov,8489473419,23-01-2022,5 Kedzie Pass,Accountant,DB Admin,Contractual
+10,Mel Bentje,mbentje9@noaa.gov,1141471134,31-07-2021,10 Spaight Point,Head_Office,Programmer,Regular
+11,Court Durning,cdurninga@blog.com,6129752265,27-07-2021,25 Pennsylvania Circle,Accountant,Office Clerk,Contractual
+12,Stoddard MacAndrew,smacandrewb@behance.net,5127867007,24-11-2021,84146 Moose Trail,IT_Department,Sales Manager,Consultant
+13,Adeline Wallbank,awallbankc@usa.gov,7468610415,02-01-2022,53 Oxford Way,Head_Office,Programmer,Part-time
+14,Hayley Gayter,hgayterd@scientificamerican.com,6302834710,15-01-2022,4 Main Parkway,Sales,Department Secretary,Consultant
+15,Dorthy Lodden,dloddene@merriam-webster.com,8144890367,01-12-2021,947 Mallard Terrace,Head_Office,DB Admin,Contractual
+16,Emmaline Riba,eribaf@bbb.org,7664348251,03-08-2021,04748 Petterle Parkway,Head_Office,Programmer,Contractual
+17,Rory Lascell,rlascellg@nasa.gov,4712311743,06-02-2022,804 Valley Edge Court,Accountant,Head Accountant,Part-time
+18,Giusto Shallcross,gshallcrossh@1und1.de,3601871369,28-03-2022,3074 Utah Avenue,Head_Office,Programmer,Consultant
+19,Ronni Thornthwaite,rthornthwaitei@plala.or.jp,1999954739,15-03-2022,68 Stephen Parkway,Accountant,Project Manager,Contractual
+20,Tobe Loader,tloaderj@latimes.com,5126584406,14-05-2022,7 Dexter Park,IT_Department,Head Accountant,Consultant
+21,Lauren Hoyt,lhoytk@hugedomains.com,4998946829,02-04-2022,004 Sauthoff Plaza,Sales,Designer,Consultant
+22,Remy Wilton,rwiltonl@hud.gov,8059528380,17-06-2022,0 Hoard Crossing,Head_Office,Head Accountant,Part-time
+23,Arnold Blamires,ablamiresm@ycombinator.com,4467631306,12-06-2022,31937 Reindahl Park,Sales,Sales Representative,Regular
+24,Donny Biddwell,dbiddwelln@dion.ne.jp,1461386269,05-02-2022,5822 Anzinger Junction,Sales,Liaison,Part-time
+25,Shellie Kidman,skidmano@thetimes.co.uk,8278018321,03-04-2022,713 Glacier Hill Park,Sales,Junior Accountant,Contractual
+26,Garfield Maddrah,gmaddrahp@loc.gov,1083387924,09-08-2021,77403 Del Sol Street,Head_Office,DB Admin,Regular
+27,Marcia Rhymes,mrhymesq@pen.io,8617908749,15-03-2022,6 Moose Terrace,Sales,Designer,Contractual
+28,Edvard Pichmann,epichmannr@noaa.gov,3701988297,26-10-2021,27 Cherokee Point,IT_Department,Project Manager,Regular
+29,Leilah Ubsdale,lubsdales@forbes.com,4461511980,11-03-2022,73 Talisman Pass,Head_Office,Programmer,Contractual
+30,Gelya Rupprecht,grupprechtt@hexun.com,2261252741,21-01-2022,71 Dapin Drive,Accountant,Designer,Part-time
+31,Humfried Grenville,hgrenvilleu@gizmodo.com,7996399849,26-01-2022,988 Bultman Pass,Accountant,Junior Accountant,Regular
+32,Dalton Murt,dmurtv@yellowbook.com,5252803143,13-09-2021,47 Carpenter Drive,Sales,Project Manager,Contractual
+33,Kimmie Mathou,kmathouw@mozilla.org,8108789921,10-06-2022,5435 Vera Street,Head_Office,Head Accountant,Contractual
+34,Bastien Duignan,bduignanx@sun.com,7401336856,19-09-2021,4459 Harper Court,Head_Office,Junior Accountant,Consultant
+35,Bernarr Vescovini,bvescoviniy@youtube.com,3812188589,27-06-2022,14194 Mifflin Alley,Head_Office,Office Clerk,Regular
+36,Blake Storch,bstorchz@ezinearticles.com,5939727829,28-12-2021,7344 Namekagon Hill,Head_Office,Encoder,Part-time
+37,Elonore Pykett,epykett10@disqus.com,7787293458,29-06-2022,8 Rowland Place,IT_Department,Head Accountant,Regular
+38,Zenia Ouldred,zouldred11@foxnews.com,2673324979,05-06-2022,65 Washington Circle,Head_Office,Encoder,Part-time
+39,Caria Beauly,cbeauly12@hp.com,4303206184,10-11-2021,2 Melody Trail,IT_Department,Liaison,Consultant
+40,Molly Munslow,mmunslow13@geocities.jp,6066815897,11-08-2021,3 Emmet Plaza,Head_Office,Head Accountant,Regular
+41,Mikkel Ruoss,mruoss14@edublogs.org,5392561936,07-04-2022,10 Anthes Street,Sales,Department Secretary,Consultant
+42,Genia Ronchetti,gronchetti15@msn.com,9889779789,29-09-2021,6 Chinook Point,IT_Department,Sales Manager,Regular
+43,Glynn Witherby,gwitherby16@usa.gov,2889073111,24-02-2022,6 Delladonna Hill,Accountant,DB Admin,Consultant
+44,Ashlee Sapseed,asapseed17@abc.net.au,6738465719,04-08-2021,0636 Eagle Crest Parkway,Accountant,Department Secretary,Contractual
+45,Marius Turford,mturford18@twitter.com,9727420926,08-12-2021,97 Crowley Junction,Sales,Head Accountant,Part-time
+46,Mayor Moggan,mmoggan19@redcross.org,3755049163,20-06-2022,008 American Ash Street,Head_Office,Department Secretary,Consultant
+47,Ardenia Pawnsford,apawnsford1a@ucla.edu,4433210683,15-07-2021,6 Merchant Crossing,IT_Department,Department Secretary,Consultant
+48,Field McKeney,fmckeney1b@princeton.edu,4179106296,11-08-2021,75993 Burning Wood Point,Sales,Sales Manager,Contractual
+49,Kerk Goves,kgoves1c@studiopress.com,9711079859,21-03-2022,6927 Melrose Street,Head_Office,Sales Representative,Part-time
+50,Vina MacSweeney,vmacsweeney1d@facebook.com,9134919997,14-04-2022,0888 Arkansas Center,Accountant,Encoder,Consultant

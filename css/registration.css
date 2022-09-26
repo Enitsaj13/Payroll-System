@@ -1,0 +1,306 @@
+/* [ FONT ]*/
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url("../fonts/poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url("../fonts/poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url("../fonts/poppins/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url("../fonts/montserrat/Montserrat-Bold.ttf");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Poppins-Regular, sans-serif;
+}
+html,
+body {
+  background-image: linear-gradient(to right, #00b4db, #0083b0);
+  font-family: Poppins-Regular, sans-serif;
+  color: #666666;
+}
+
+.form-control {
+  color: #666666;
+  height: 35px;
+  position: relative;
+  bottom: 8px;
+  font-family: Poppins-Medium;
+  font-size: 15px;
+  border: 1px solid #e3e5e6;
+  line-height: 1.5;
+  display: block;
+  width: 100%;
+  height: 40px;
+  border-radius: 25px;
+  padding: 0 30px 0 68px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #f2f2f2;
+  color: #666666;
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
+
+.card-registration .select-arrow {
+  top: 13px;
+}
+
+#regform {
+  margin: auto !important;
+  height: 77.5vh !important;
+}
+
+.div-btn {
+  position: relative;
+  top: 36rem;
+  right: 4.9rem;
+}
+
+.reg-btn {
+  position: relative;
+  bottom: 35rem;
+  left: 80px;
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+
+  width: 44rem;
+  height: 50px;
+  border-radius: 25px;
+  background: #33b5e5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.reg-btn:hover {
+  background: #0099cc;
+  color: #fff;
+}
+
+#card-reg {
+  position: relative;
+  bottom: 45px;
+}
+
+.registered {
+  position: relative;
+  bottom: 34rem;
+  left: 20rem;
+  color: #757272;
+  font-size: 0.9rem;
+}
+
+.redirect {
+  color: #33b5e5;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.div-redirect {
+  position: relative;
+  bottom: 0.4rem;
+}
+
+.redirect:hover {
+  color: #0099cc;
+}
+
+.remember {
+  position: relative;
+  top: 0.6rem;
+}
+
+select {
+  height: 40px;
+  color: #666666;
+  width: 100% !important;
+  border: 1px solid #e3e5e6;
+  border-radius: 25px;
+  box-sizing: border-box;
+  text-align: center;
+  outline-color: #4a4d4b;
+  width: 100%;
+  position: relative;
+  bottom: 8px;
+}
+
+.month {
+  width: 24%;
+}
+
+.position {
+  width: 100%;
+  height: 35px;
+  position: relative;
+  bottom: 8px;
+}
+
+h6,
+.form-label {
+  font-family: Poppins-Regular, sans-serif;
+}
+
+h3 {
+  font-family: Poppins-bold;
+}
+
+i {
+  font-size: 50px;
+  position: relative;
+  top: 12px;
+}
+
+.year {
+  position: relative;
+  bottom: 186px;
+  left: 400px;
+}
+
+#sem-group {
+  position: relative;
+  bottom: 158px;
+  left: 46px;
+}
+
+.semester {
+  width: 85% !important;
+}
+
+.student-name {
+  width: 97%;
+}
+
+.school {
+  position: relative;
+  bottom: 370px;
+  left: 425px;
+}
+
+.password {
+  position: relative;
+  bottom: 390px;
+  left: 425px;
+}
+
+.upload-input,
+.school-input {
+  width: 326px;
+  color: #666666;
+}
+
+.username {
+  position: relative;
+  bottom: 579px;
+  left: 70px;
+}
+
+.confirm-pass {
+  position: relative;
+  bottom: 24.4rem;
+  left: 4.3rem;
+}
+
+.upload {
+  position: relative;
+  bottom: 36.2rem;
+  left: 26.5rem;
+}
+
+#box-section {
+  margin: auto !important;
+}
+
+/* Alert Error and Success */
+
+#user_type {
+  height: 40px;
+  width: 98%;
+  padding: 5px 10px;
+  background: white;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.error {
+  width: 92%;
+  margin: 0px auto;
+  padding: 10px;
+  border: 1px solid #a94442;
+  color: #a94442;
+  background: #f2dede;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.success {
+  color: #3c763d;
+  background: #dff0d8;
+  border: 1px solid #3c763d;
+  margin-bottom: 20px;
+}
+
+#login-error {
+  width: 24%;
+  position: relative;
+  right: 1.25rem;
+  top: 13rem;
+}
+
+#reg-error {
+  width: 48%;
+  position: relative;
+  left: 2.3rem;
+  top: 7rem;
+}
+
+/* radio button */
+
+.form-check-input:focus {
+  box-shadow: none;
+  border-color: #4a4d4b;
+}
+
+.form-check-input:checked {
+  background-color: #4a4d4b;
+  outline-color: none;
+}

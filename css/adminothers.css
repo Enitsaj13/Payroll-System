@@ -1,0 +1,52 @@
+/* Modal */
+
+#modal-title {
+  position: relative;
+  left: 6rem !important;
+}
+
+#title-delete {
+  position: relative;
+  left: 10rem !important;
+}
+
+.btn {
+  border-radius: 25px;
+}
+
+.form-control-input,
+select {
+  border-radius: 5px;
+}
+
+.modal-content {
+  border-radius: 10px;
+  border-color: transparent;
+  position: relative;
+  top: -1rem;
+}
+
+/* employee view */
+.add {
+  color: #5a5c5a;
+  position: relative;
+  left: 28rem;
+  top: 0.2rem;
+}
+
+.search {
+  position: relative;
+  bottom: 2.38rem;
+  left: 13.55rem;
+}
+
+.search-div {
+  position: relative;
+  left: 32rem;
+  top: 0.8rem;
+}
+
+.nav-admin {
+  width: 6rem;
+  margin-left: 3rem;
+}
