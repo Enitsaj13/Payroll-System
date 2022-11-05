@@ -137,10 +137,10 @@ include('../logout.php');
                             <i class='bx bxs-report'></i><span class="hide-menu">Summary Reports</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="controls.php" aria-expanded="false">
-                            <i class='bx bxs-report'></i><span class="hide-menu">Controls</span></a>
+                            <i class='bx bxs-cog'></i><span class="hide-menu">Controls</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="utilities.php" aria-expanded="false">
-                            <i class='bx bxs-report'></i><span class="hide-menu">Utility Management</span></a>
+                            <i class='bx bx-wrench'></i><span class="hide-menu">Utility Management</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="../index.php?logout='1'" aria-expanded="false">
                             <i class='bx bxs-log-out-circle'></i><span class="hide-menu">Sign out</span></a>
@@ -205,7 +205,12 @@ include('../logout.php');
                     <div class="col-lg-4 col-xlg-3 col-md-5">
                         <div class="card">
                             <div class="card-body">
-                                "Insert content"
+                                <center class="mt-4">
+                                    <div class="row text-center justify-content-md-center">
+
+                                    Insert content
+                                    </div>
+                                </center>
                             </div>
                         </div>
                     </div>

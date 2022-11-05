@@ -121,11 +121,15 @@ include ('functions.php');
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">        
                     <li> <a class="waves-effect waves-dark" href="userspage.php" aria-expanded="false">
-                            <i class='bx bxs-user-circle'></i><span class="hide-menu">User Information</span></a>
+                            <i class='bx bxs-user-circle'></i><span class="hide-menu">Profile</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="ledger.php" aria-expanded="false">
+                            <i class='bx bx-columns'></i><span class="hide-menu">Ledger</span></a>
                         </li>
                         
                         <li> <a class="waves-effect waves-dark" href="index.php?logout='1'" aria-expanded="false">
                             <i class='bx bxs-log-out-circle'></i><span class="hide-menu">Sign out</span></a>
+                        
                     </ul>
                
                 </nav>
