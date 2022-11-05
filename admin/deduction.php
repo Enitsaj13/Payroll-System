@@ -127,6 +127,12 @@ include('../logout.php');
                         <li> <a class="waves-effect waves-dark" href="computation.php" aria-expanded="false">
                             <i class='bx bxs-report'></i><span class="hide-menu">Summary Reports</span></a>
                         </li>
+                        <li> <a class="waves-effect waves-dark" href="controls.php" aria-expanded="false">
+                            <i class='bx bxs-report'></i><span class="hide-menu">Controls</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="utilities.php" aria-expanded="false">
+                            <i class='bx bxs-report'></i><span class="hide-menu">Utility Management</span></a>
+                        </li>
                         <li> <a class="waves-effect waves-dark" href="../index.php?logout='1'" aria-expanded="false">
                             <i class='bx bxs-log-out-circle'></i><span class="hide-menu">Sign out</span></a>
                     </ul>
