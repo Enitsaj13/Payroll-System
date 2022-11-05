@@ -149,12 +149,12 @@ include ('functions.php');
             <div class="container-fluid">
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">Ledger</h3>
+                        <h3 class="text-themecolor">Dashboard</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
                             <i class='bx bx-home ms-1 mt-2'></i>
                             <i class='bx bx-chevron-right mt-2'></i>
-                            <li class="breadcrumb-item active">Salary History and Details</li>
+                            <li class="breadcrumb-item active">Charts and Analytics</li>
                         </ol>
                     </div>
                 </div>
@@ -194,7 +194,7 @@ include ('functions.php');
                                 <center class="mt-4">
                                     <div class="row text-center justify-content-md-center">
 
-                                    Insert content - all salary details
+                                    Insert content - e.g. time in, time out, date and time for today, # of late + leave + absences
                                     </div>
                                 </center>
                             </div>
