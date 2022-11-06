@@ -306,15 +306,6 @@ if(isset($_POST['table']))
                     <div class="col-lg-12 col-xlg-12 col-md-5">
                         <div class="card">
                             <div class="card-body">
-                                <center class="mt-4">
-                                    <div class="row text-center justify-content-md-center">
-                                        <div class="col-lg-10 ">
-                                            <form method="post" action="" enctype="multipart/form-data">
-                                            <input type="file" name="backup_file" class="form form-control-user mb-2"><br>
-                                            <input type="submit" name="restore" value="Restore" class="btn btn-primary btn-user" style="width:100%">
-                                            </form>
-                                        </div>
-                                        <div class="col-lg-10">
                                     <div class="row px-5 mt-4">
                                         <div class="col-lg-5">
                                             <h3>BACKUP</h3>
