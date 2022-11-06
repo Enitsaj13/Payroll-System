@@ -137,7 +137,7 @@ include('../logout.php');
                             <i class='bx bx-wrench'></i><span class="hide-menu">Utility Management</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="adminprofile.php" aria-expanded="false">
-                            <i class='bx bxs-cog'></i><span class="hide-menu">Controls</span></a>
+                            <i class='bx bxs-cog'></i><span class="hide-menu">Settings</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="../index.php?logout='1'" aria-expanded="false">
                             <i class='bx bxs-log-out-circle'></i><span class="hide-menu">Sign out</span></a>
