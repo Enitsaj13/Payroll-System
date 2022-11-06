@@ -119,8 +119,8 @@ include ('functions.php');
             <div class="scroll-sidebar">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                    <ul id="sidebarnav">        
-                         <li> <a class="waves-effect waves-dark" href="userspage.php" aria-expanded="false">
+                    <ul id="sidebarnav">         
+                        <li> <a class="waves-effect waves-dark" href="userspage.php" aria-expanded="false">
                             <i class='bx bxs-user-circle'></i><span class="hide-menu">Profile</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="ledger.php" aria-expanded="false">
@@ -139,88 +139,142 @@ include ('functions.php');
         </aside>
         <!-- =================================== -->
 
-       
+
         <div class="page-wrapper">
            
-            <!-- ======================================== -->
             <div class="container-fluid">
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">Ledger</h3>
+                        <h3 class="text-themecolor">Salary Details</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
                             <i class='bx bx-home ms-1 mt-2'></i>
                             <i class='bx bx-chevron-right mt-2'></i>
-                            <li class="breadcrumb-item active">Salary History and Details</li>
+                            <li class="breadcrumb-item active">Net Pay, Gross Pay, Deductions</li>
                         </ol>
                     </div>
-                </div>
-                     <!-- display success using session -->
-
-                     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-                        <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                        </symbol>
-                        <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
-                        </symbol>
-                        </svg>
-
-                        <?php 
-
-                            if(isset($_SESSION['success'])){
+                    <div class="col-md-7 align-self-center">
 
 
-                                echo "<div id='success' class='alert alert-success pull-center alert-dismissible fade show text-center w-50' role='alert'>
-                                <svg class='bi flex-shrink-0 me-2' width='17' height='17' mr-1 role='img' aria-label='Success:'><use xlink:href='#check-circle-fill'/></svg>
-                                <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-                                    <span aria-hidden='true'>&times;</span></button>
-                                    ".$_SESSION['success']."
-                                </div>";
+                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                    <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                    </symbol>
+                    <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                    </symbol>
+                    <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </symbol>
+                    </svg>
 
-                                unset($_SESSION['success']);
-                            }
-                        ?>
-                                
-           
-                <div class="row">
-                    <!-- Column -->
-                    <div class="col-lg-4 col-xlg-3 col-md-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <center class="mt-4">
-                                    <div class="row text-center justify-content-md-center">
-
-                                    Insert content - all salary details
-                                    </div>
-                                </center>
-                            </div>
-                        </div>
-                    </div>
-          
+                        <!-- display error and success using session -->
+					<?php 
                     
+						// if session error is set then display it
+						if(isset($_SESSION['error'])){
+						
+							echo "<div id='error' class='alert alert-danger alert-dismissible fade show text-center w-50' role='alert'>
+                            <svg class='bi flex-shrink-0 me-2' width='17' height='17' role='img' aria-label='Danger:'><use xlink:href='#exclamation-triangle-fill'/></svg>
+							<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+								<span aria-hidden='true'>&times;</span></button>
+								".$_SESSION['error']."
+							</div>";
+							
+							unset($_SESSION['error']);
+						}
+						// if session success is set then display it
+						if(isset($_SESSION['success'])){
+
+
+							echo "<div id='success' class='alert alert-success alert-dismissible fade show text-center w-50' role='alert'>
+                            <svg class='bi flex-shrink-0 me-2' width='17' height='17' mr-1 role='img' aria-label='Success:'><use xlink:href='#check-circle-fill'/></svg>
+							<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+								<span aria-hidden='true'>&times;</span></button>
+								".$_SESSION['success']."
+							</div>";
+
+							unset($_SESSION['success']);
+						}
+					?>
+                    </div>
                 </div>
-            
-            </div>
-          
-            <!-- footer -->
-       
+    
+                            <div class="table-responsive-md bg-white">
+                                    
+                                        <h5 class="card-title mb-0">
+                                            
+                                        </h5>
+                                            <form action="#" method="POST">    <!-- table for the list of user profile -->
+                                                <table id="EmployeeTable" class="display compact table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Rate</th>
+                                                        <th>Days Work</th>
+                                                        <th>Overtime</th>
+                                                        <th>Late</th>
+                                                        <th>Leave</th>
+                                                        <th>Absence</th>
+                                                        <th>Gross Pay</th>
+                                                        <th>Deductions</th>
+                                                        <th>Net Pay</th>
+                                                        <th>Action</th>
+
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                <?php
+                                                                     
+
+                                                    ?>
+                                            </tbody>
+                                            </table>
+                                        </form>                                          <!-- end of table -->
+                                        </div>
+                           
+                
+        
+        
             <footer class="footer text-center"> © 2022 Payroll System</a> </footer>
          
         </div>
-      
+     
     </div>
 
-    <!-- js bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+   <!-- js bootstrap -->
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
     <!--Wave Effects -->
-    <script src="js/waves.js"></script>
+    <script src="../js/waves.js"></script>
     <!--Menu sidebar -->
-    <script src="js/sidebarmenu.js"></script>
+    <script src="../js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
-    <script src="js/custom.min.js"></script>
+    <script src="../js/custom.min.js"></script>
+
+    <!-- js data tables -->
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
+
+    <!-- generate datatable on our table -->
+    <script>
+    $(document).ready(function(){
+        //inialize datatable
+        $('#EmployeeTable').DataTable();
+
+        //hide alert
+        $(document).on('click', '.close', function(){
+            $('.alert').hide();
+        })
+    });
+    </script>
+
+ 
+
 </body>
 
 </html>

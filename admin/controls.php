@@ -183,22 +183,7 @@ include('../logout.php');
                     </symbol>
                     </svg>
 
-					<?php 
-                    
-						// if session success is set then display it
-						if(isset($_SESSION['success'])){
-
-
-							echo "<div id='success' class='alert alert-success alert-dismissible fade show text-center w-50' role='alert'>
-                            <svg class='bi flex-shrink-0 me-2' width='17' height='17' mr-1 role='img' aria-label='Success:'><use xlink:href='#check-circle-fill'/></svg>
-							<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-								<span aria-hidden='true'>&times;</span></button>
-								".$_SESSION['success']."
-							</div>";
-
-							unset($_SESSION['success']);
-						}
-					?>
+				
            
                 <div class="row">
                     <!-- Column -->
