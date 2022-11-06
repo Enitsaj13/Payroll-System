@@ -76,7 +76,7 @@ if (isset($_POST['submit'])) {
             }
       
         } else {
-            $_SESSION['error'] = json_encode("Invalid username or password.");
+            $_SESSION['error'] = json_encode("Invalid email or password.");
         }
     }   
 }
