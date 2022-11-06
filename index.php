@@ -155,7 +155,6 @@ include('cookie.php');
                 <i class='bx bxs-right-arrow' aria-hidden="true"></i>
               </a>
             </div>
-            <div class="g-recaptcha" data-sitekey="6LfblfMgAAAAAAxA-RhPiciz3wj40JspNifoBstw"></div>
           </form>
         </div>
       </div>

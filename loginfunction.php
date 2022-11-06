@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
     }
 
     // Storing google recaptcha response in $recaptcha variable
-    $recaptcha = $_POST['g-recaptcha-response'];
+    //$recaptcha = $_POST['g-recaptcha-response'];
 
     if (empty($email)) {
         $_SESSION['error'] = "Email is required.";
@@ -27,7 +27,9 @@ if (isset($_POST['submit'])) {
     } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $_SESSION['error'] = "Invalid email format.";
 
-    } else if ($recaptcha == '') {
+    }
+    //Gotta turn off the annoying captcha;
+    /*else if ($recaptcha == '') {
         $_SESSION['error'] = "Please check the captcha.";
     }
 
@@ -45,16 +47,18 @@ if (isset($_POST['submit'])) {
   
     // Response return by google is in
     // JSON format, so we have to parse that json
-    $response = json_decode($response);
+    $response = json_decode($response);*/
 
     // if no error in the captcha and the validation, then login the user
-    if (count($errors) == 0 && $response -> success == true) {
+    //Old if including captcha;
+    //if (count($errors) == 0 && $response -> success == true) {
+    if (count($errors) == 0) {
         
-        $password = sha1($password); // encrypt the password before storing in the database
+        //$password = sha1($password); // encrypt the password before storing in the database
         
-        $query = "SELECT * FROM employee WHERE email='$email' AND password='$password'";
+        $query = "SELECT * FROM employee WHERE email='".$email."' AND password='".$password."';";
         $results = mysqli_query($conn, $query);
-
+        //return $_SESSION['error'] = json_encode($results);
         if (mysqli_num_rows($results) == 1) { // user found in database
 
             // check if user is admin or user and put user data in session
@@ -72,7 +76,7 @@ if (isset($_POST['submit'])) {
             }
       
         } else {
-            $_SESSION['error'] = "Incorrect email or password.";
+            $_SESSION['error'] = json_encode("Invalid username or password.");
         }
     }   
 }
