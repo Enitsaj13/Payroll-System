@@ -341,13 +341,13 @@ if(isset($_POST['table']))
                                             <input type="submit" name="submit" id="submit" class="btn btn-info btn-block mb-4" value="Backup">
                                             </form>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <h3>RESTORE</h3>
-                                        <form method="post" action="" enctype="multipart/form-data">
-                                        <input type="file" name="backup_file" class="form form-control-user mb-2"><br>
-                                        <input type="submit" name="restore" value="Restore" class="btn btn-primary btn-user" style="width:100%">
-                                        </form>
+                                        <div class="col-lg-3">
+                                            <h3>RESTORE</h3>
+                                            <form method="post" action="" enctype="multipart/form-data">
+                                            <input type="file" name="backup_file" class="form form-control-user mb-2"><br>
+                                            <input type="submit" name="restore" value="Restore" class="btn btn-primary btn-user" style="width:100%">
+                                            </form>
+                                        </div>
                                     </div>
                             </div>
                         </div>
