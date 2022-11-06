@@ -4,7 +4,127 @@ include ('../database/dbconnection.php');
 include ('../functions.php');
 include('../logout.php');
 
+if (! empty($_FILES)) {
+    // Validating SQL file type by extensions
+    if (!in_array(strtolower(pathinfo($_FILES["backup_file"]["name"], PATHINFO_EXTENSION)), array(
+        "sql"
+    ))) {
+        $response = array(
+            "type" => "error",
+            "message" => "Invalid File Type"
+        );
+    } else {
+        if (is_uploaded_file($_FILES["backup_file"]["tmp_name"])) {
+            move_uploaded_file($_FILES["backup_file"]["tmp_name"], $_FILES["backup_file"]["name"]);
+            $response = restoreMysqlDB($_FILES["backup_file"]["name"], $conn);
+        }
+    }
+}
+
+function restoreMysqlDB($filePath, $conn) {
+    $sql = '';
+    $error = '';
+    $mysqli = new mysqli("localhost", "root", "", "payroll");
+    $mysqli->query('SET foreign_key_checks = 0');
+    if ($result = $mysqli->query("SHOW TABLES")) {
+      while($row = $result->fetch_array(MYSQLI_NUM)) {
+        $mysqli->query('DROP TABLE IF EXISTS '.$row[0]);
+      }
+    }
+    $mysqli->query('SET foreign_key_checks = 1');
+
+    if (file_exists($filePath)) {
+        $lines = file($filePath);
+
+        foreach ($lines as $line) {
+
+            // Ignoring comments from the SQL script
+            if (substr($line, 0, 2) == '--' || $line == '') {
+                continue;
+            }
+
+            $sql .= $line;
+
+            if (substr(trim($line), - 1, 1) == ';') {
+                $result = mysqli_query($conn, $sql);
+                if (! $result) {
+                    $error .= mysqli_error($conn) . "\n";
+                }
+                $sql = '';
+            }
+        } // end foreach
+
+        if ($error) {
+            $response = array(
+                "type" => "error",
+                "message" => $error
+            );
+        } else {
+            $response = array(
+                "type" => "success",
+                "message" => "Database Restore Completed Successfully."
+            );
+        }
+    } // end if file exists
+    return $response;
+}
 ?>
+
+<?php
+$connect = new PDO("mysql:host=localhost;dbname=payroll", "root", "");
+$get_all_table_query = "SHOW TABLES";
+$statement = $connect->prepare($get_all_table_query);
+$statement->execute();
+$result = $statement->fetchAll();
+
+if(isset($_POST['table']))
+{
+ $output = '';
+ foreach($_POST["table"] as $table)
+ {
+  $show_table_query = "SHOW CREATE TABLE " . $table . "";
+  $statement = $connect->prepare($show_table_query);
+  $statement->execute();
+  $show_table_result = $statement->fetchAll();
+
+  foreach($show_table_result as $show_table_row)
+  {
+   $output .= "\n\n" . $show_table_row["Create Table"] . ";\n\n";
+  }
+  $select_query = "SELECT * FROM " . $table . "";
+  $statement = $connect->prepare($select_query);
+  $statement->execute();
+  $total_row = $statement->rowCount();
+
+  for($count=0; $count<$total_row; $count++)
+  {
+   $single_result = $statement->fetch(PDO::FETCH_ASSOC);
+   $table_column_array = array_keys($single_result);
+   $table_value_array = array_values($single_result);
+   $output .= "\nINSERT INTO $table (";
+   $output .= "" . implode(", ", $table_column_array) . ") VALUES (";
+   $output .= "'" . implode("','", $table_value_array) . "');\n";
+  }
+ }
+ $file_name = 'database_backup_on_' . date('y-m-d') . '.sql';
+ $file_handle = fopen($file_name, 'w+');
+ fwrite($file_handle, $output);
+ fclose($file_handle);
+ header('Content-Description: File Transfer');
+ header('Content-Type: application/octet-stream');
+ header('Content-Disposition: attachment; filename=' . basename($file_name));
+ header('Content-Transfer-Encoding: binary');
+ header('Expires: 0');
+ header('Cache-Control: must-revalidate');
+ header('Pragma: public');
+ header('Content-Length: ' . filesize($file_name));
+ ob_clean();
+ flush();
+ readfile($file_name);
+ unlink($file_name);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +159,7 @@ include('../logout.php');
 
 <body class="fix-header card-no-border fix-sidebar">
     <!-- ============================================================== -->
- 
+
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
@@ -47,14 +167,14 @@ include('../logout.php');
 
         #error, #success {
         border-radius: 25px;
-       
+
         }
 
         .form-control, h4 {
             color: gray;
         }
     </style>
- 
+
 
     <div id="main-wrapper">
         <!-- ============================================================== -->
@@ -62,17 +182,17 @@ include('../logout.php');
         <header class="topbar">
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
                 <!-- ============================================================== -->
-           
+
                 <div class="navbar-header">
                     <a class="navbar-brand" href="home.php">
                             <!-- Logo icon --><b>
-                            
+
                                 <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
                                 <!-- Logo icon -->
                             </b>
-                        
+
                             <!-- Logo text --><span>
-                            
+
                             <img src="../assets/images/text-logo.png" alt="homepage" class="dark-logo" style="height: 60px;"/>
 
 
@@ -93,7 +213,7 @@ include('../logout.php');
                                 top: 5px; right: 1.3rem;"></i></a>
                         </li>
                     </ul>
-                    
+
                     <ul class="navbar-nav my-lg-0" style="position: relative; left: 88rem;">
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown u-pro">
@@ -109,7 +229,7 @@ include('../logout.php');
                 </div>
             </nav>
         </header>
-      
+
         <aside class="left-sidebar">
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
@@ -117,7 +237,7 @@ include('../logout.php');
                 <nav class="sidebar-nav">
 
                     <ul id="sidebarnav">
-                       
+
                     <li> <a class="waves-effect waves-dark" href="home.php" aria-expanded="false">
                             <i class='bx bxs-dashboard'></i><span class="hide-menu">Dashboard</span></a>
                         </li>
@@ -143,7 +263,7 @@ include('../logout.php');
                             <i class='bx bxs-log-out-circle'></i><span class="hide-menu">Sign out</span></a>
                         </li>
                     </ul>
-               
+
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
@@ -151,14 +271,14 @@ include('../logout.php');
         </aside>
         <!-- =================================== -->
 
-       
+
         <div class="page-wrapper">
-           
+
             <!-- ======================================== -->
             <div class="container-fluid">
-                
+
                 <div class="row page-titles">
-                    
+
                     <div class="col-md-5 align-self-center">
                         <h3 class="text-themecolor">Utility Management</h3>
                         <ol class="breadcrumb">
@@ -169,7 +289,7 @@ include('../logout.php');
                         </ol>
                     </div>
                 </div>
-                        
+
                 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
                     <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
@@ -179,8 +299,8 @@ include('../logout.php');
                     </symbol>
                     </svg>
 
-					
-           
+
+
                 <div class="row">
                     <!-- Column -->
                     <div class="col-lg-4 col-xlg-3 col-md-5">
@@ -188,24 +308,52 @@ include('../logout.php');
                             <div class="card-body">
                                 <center class="mt-4">
                                     <div class="row text-center justify-content-md-center">
-
-                                    Insert content
+                                        <div class="col-lg-3">
+                                            <form method="post" action="" enctype="multipart/form-data">
+                                            <input type="file" name="backup_file" class="form form-control-user mb-2"><br>
+                                            <input type="submit" name="restore" value="Restore" class="btn btn-primary btn-user" style="width:100%">
+                                            </form>
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <form id="export_form" method="post">
+                                            <h5>Select Tables for Export</h5>
+                                            <?php
+                                                foreach($result as $table) {
+                                            ?>
+                                            <div class='checkbox'>
+                                                <label><input type='checkbox' class='checkbox_table' name='table[]' value='<?php echo $table[0]; ?>' />
+                                                    <?php echo $table[0]; ?>
+                                                </label>
+                                            </div>
+                                            <?php } ?><br>
+                                            <input type='checkbox' onClick='toggle(this)' />Check All<br>
+                                            <script language="JavaScript">
+                                                function toggle(source) {
+                                                    checkboxes = document.getElementsByName('table[]');
+                                                        for(var i=0, n=checkboxes.length;i<n;i++) {
+                                                            checkboxes[i].checked = source.checked;
+                                                        }
+                                                }
+                                            </script>
+                                            <input type="submit" name="submit" id="submit" class="btn btn-info btn-block mb-4" value="Backup">
+                                            </form>
+                                        </div>
                                     </div>
                                 </center>
                             </div>
                         </div>
                     </div>
-                   
+
                 </div>
-            
+
             </div>
-          
+
             <!-- footer -->
-       
+
             <footer class="footer text-center"> © 2022 Payroll System</a> </footer>
-         
+
         </div>
-      
+
     </div>
 
     <!-- js bootstrap -->
