@@ -148,6 +148,10 @@ include('cookie.php');
             <div class="text-center p-t-12 forgot-text-pass">
               <span class="txt1"> Forgot </span>
               <a class="txt2" href="forgotpass/forgetpassword.php"> Password? </a>
+              <a class="create-text" href="registration.php">
+                Create your Account
+                <i class='bx bxs-right-arrow' aria-hidden="true"></i>
+              </a>
             </div>
             <div class="text-center p-t-136">
               <a class="create-text" href="registration.php">
@@ -155,10 +159,6 @@ include('cookie.php');
                 <i class='bx bxs-right-arrow' aria-hidden="true"></i>
               </a>
             </div>
-<<<<<<< Updated upstream
-=======
-            <!-- <div class="g-recaptcha" data-sitekey="6LfblfMgAAAAAAxA-RhPiciz3wj40JspNifoBstw"></div> -->
->>>>>>> Stashed changes
           </form>
         </div>
       </div>
