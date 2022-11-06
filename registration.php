@@ -1,7 +1,7 @@
 <?php
   // all the files that are needed to include
   include ('database/dbconnection.php');
-  include ('addregister.php');
+  // include ('addregister.php');
 ?>
 
 <!DOCTYPE html>
