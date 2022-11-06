@@ -110,7 +110,7 @@ session_start();
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
 
-                        <li> <a class="waves-effect waves-dark" href="home.php" aria-expanded="false">
+                    <li> <a class="waves-effect waves-dark" href="home.php" aria-expanded="false">
                             <i class='bx bxs-dashboard'></i><span class="hide-menu">Dashboard</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="employee.php" aria-expanded="false">
@@ -129,12 +129,13 @@ session_start();
                             <i class='bx bx-wrench'></i><span class="hide-menu">Utility Management</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="adminprofile.php" aria-expanded="false">
-                            <i class='bx bxs-cog'></i><span class="hide-menu">Controls</span></a>
+                            <i class='bx bxs-cog'></i><span class="hide-menu">Settings</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="../index.php?logout='1'" aria-expanded="false">
                             <i class='bx bxs-log-out-circle'></i><span class="hide-menu">Sign out</span></a>
                         </li>
-                    </ul>
+
+                    </ul>   
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>

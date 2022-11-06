@@ -142,7 +142,8 @@ include('../logout.php');
                         <li> <a class="waves-effect waves-dark" href="../index.php?logout='1'" aria-expanded="false">
                             <i class='bx bxs-log-out-circle'></i><span class="hide-menu">Sign out</span></a>
                         </li>
-               
+                        
+                    </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
             </div>
