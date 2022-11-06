@@ -64,7 +64,7 @@ include ('functions.php');
                 <!-- ============================================================== -->
            
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="userdashboard.php">
+                    <a class="navbar-brand" href="userspage.php">
                             <!-- Logo icon --><b>
                             
                                 <img src="./assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
@@ -120,9 +120,6 @@ include ('functions.php');
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">        
-                         <li> <a class="waves-effect waves-dark" href="userdashboard.php" aria-expanded="false">
-                            <i class='bx bxs-dashboard'></i><span class="hide-menu">Dashboard</span></a>
-                        </li>  
                          <li> <a class="waves-effect waves-dark" href="userspage.php" aria-expanded="false">
                             <i class='bx bxs-user-circle'></i><span class="hide-menu">Profile</span></a>
                         </li>

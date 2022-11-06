@@ -208,7 +208,7 @@ include('../logout.php');
                                 <center class="mt-4">
                                     <div class="row text-center justify-content-md-center">
 
-                                    Insert content - e.g. Audit Logs ? View who access and when it was access
+                                    Privilege - Data table - allow edit, user details
                                     </div>
                                 </center>
                             </div>
