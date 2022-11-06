@@ -145,12 +145,12 @@ include ('functions.php');
             <div class="container-fluid">
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">Salary Details</h3>
+                        <h3 class="text-themecolor">Ledger</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
                             <i class='bx bx-home ms-1 mt-2'></i>
                             <i class='bx bx-chevron-right mt-2'></i>
-                            <li class="breadcrumb-item active">Net Pay, Gross Pay, Deductions</li>
+                            <li class="breadcrumb-item active">Salary History and Details</li>
                         </ol>
                     </div>
                     <div class="col-md-7 align-self-center">
