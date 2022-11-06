@@ -24,7 +24,7 @@ include('cookie.php');
     <!-- Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!-- recaptcha -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 
   
   </head>
@@ -155,6 +155,10 @@ include('cookie.php');
                 <i class='bx bxs-right-arrow' aria-hidden="true"></i>
               </a>
             </div>
+<<<<<<< Updated upstream
+=======
+            <!-- <div class="g-recaptcha" data-sitekey="6LfblfMgAAAAAAxA-RhPiciz3wj40JspNifoBstw"></div> -->
+>>>>>>> Stashed changes
           </form>
         </div>
       </div>

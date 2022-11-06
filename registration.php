@@ -1,7 +1,7 @@
 <?php
   // all the files that are needed to include
   include ('database/dbconnection.php');
-  // include ('addregister.php');
+  require ('addregister.php');
 ?>
 
 <!DOCTYPE html>
@@ -105,7 +105,7 @@
                 </h3>
 
                
-                <form method="POST" action="#" enctype='multipart/form-data' id="regform">
+                <form method="POST" action="" enctype='multipart/form-data' id="regform">
                   <div class="row">
                     <div class="col-md-6 mb-4">
                       <div class="form-outline">

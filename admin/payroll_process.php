@@ -24,9 +24,11 @@ if (isset($_GET['save'])) {
 
     if (empty($day_work)) {
         $_SESSION['error'] = "Please input the number of days work.";
+        header('location: payroll.php');
     }
-    else if ($day_work > 15) {
-        $_SESSION['error'] = "The number of days work cannot be more than 15.";
+    else if ($day_work > 60) {
+        $_SESSION['error'] = "The number of days work cannot be more than 60.";
+        header('location: payroll.php');
     }
     // late, leave, absence and overtime are not required, so if they are not inputted, set them to 0
     else if (empty($late)) {
