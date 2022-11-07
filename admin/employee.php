@@ -206,7 +206,7 @@ session_start();
                             <div class="table-responsive-md bg-white">
                                         
                                         <h5 class="card-title mb-0">
-                                            <a href="../registration.php" class="btn btn-success m-2 pull-right">
+                                            <a href="../registration_responsive.php" class="btn btn-success m-2 pull-right">
                                             <i class='bx bxs-add-to-queue'></i></a>
                                             <a href="print_employee.php" class="btn btn-info m-2 pull-right">
                                             <i class='bx bx-printer'></i></a>
