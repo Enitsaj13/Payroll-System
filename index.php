@@ -24,7 +24,7 @@ include('cookie.php');
     <!-- Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!-- recaptcha -->
-    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   
   </head>
@@ -32,12 +32,13 @@ include('cookie.php');
     
   <style>
     .g-recaptcha {
-      margin-top: 4rem;
+      margin-top: 3rem;
     }
 
     .create-text {
       position: relative;
-      top: 3.5rem;
+      top: 2rem;
+      right: 9rem;
     }
 
   
@@ -45,6 +46,8 @@ include('cookie.php');
     .forgot-text-pass {
       position: relative;
       bottom: 1.5rem;
+      left: 5rem;
+      padding-bottom: 3rem;
     }
     
     .container-login100-form-btn {
@@ -76,6 +79,19 @@ include('cookie.php');
     #error {
       border-radius: 25px; 
     }
+
+    .rememberme {
+        font-size: 0.9rem;
+        color: #666666;
+        margin-left: 0.2rem;
+    }
+
+    .txt1 {
+        color: #666666;
+        font-size: 0.9rem;
+    }
+
+  
     
 
   </style>
@@ -140,7 +156,7 @@ include('cookie.php');
             </div>
             <div id="remember" class="mb-3 form-check">
                 <input type="checkbox" name="remember" class="form-check-input remember">
-                <label class="form-check-label">Remember me</label>
+                <label class="form-check-label rememberme">Remember me</label>
             </div>
             <div class="container-login100-form-btn">
               <button type="submit" name="submit" class="login100-form-btn">Login</button>
@@ -153,12 +169,10 @@ include('cookie.php');
                 <i class='bx bxs-right-arrow' aria-hidden="true"></i>
               </a>
             </div>
-            <div class="text-center p-t-136">
-              <a class="create-text" href="registration.php">
-                Create your Account
-                <i class='bx bxs-right-arrow' aria-hidden="true"></i>
-              </a>
-            </div>
+           
+
+            
+            <!-- <div class="g-recaptcha" data-sitekey="6LflAwMhAAAAAEt6Ubaak_BnxKACvlnD6Mnkv8vB"></div> -->
           </form>
         </div>
       </div>
