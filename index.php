@@ -164,7 +164,7 @@ include('cookie.php');
             <div class="text-center p-t-12 forgot-text-pass">
               <span class="txt1"> Forgot </span>
               <a class="txt2" href="forgotpass/forgetpassword.php"> Password? </a>
-              <a class="create-text" href="registration.php">
+              <a class="create-text" href="registration_responsive.php">
                 Create your Account
                 <i class='bx bxs-right-arrow' aria-hidden="true"></i>
               </a>
