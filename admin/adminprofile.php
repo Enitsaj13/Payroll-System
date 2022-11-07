@@ -2,7 +2,6 @@
 // includes all the files needed for the page
 include ('../database/dbconnection.php');
 include ('../functions.php');
-include('../logout.php');
 
 ?>
 <!DOCTYPE html>

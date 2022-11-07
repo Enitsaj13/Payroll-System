@@ -1,7 +1,6 @@
 <?php
 // include all the necessary files for this page
 include('../database/dbconnection.php');
-include('../logout.php');
 session_start();
 
 // display the input in the payroll pages (e.g. Rate, Late, Leave, etc.)

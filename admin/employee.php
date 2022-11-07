@@ -1,7 +1,6 @@
 <?php
 // include all the necessary files for this page
 include('../database/dbconnection.php');
-include('../logout.php');
 session_start();
 ?>
 <!DOCTYPE html>
@@ -217,6 +216,9 @@ session_start();
                                                 <thead>
                                                     <tr>
     
+                                                        <th>Status</th>
+                                                        <th>Time-in</th>
+                                                        <th>Time-out</th>
                                                         <th>Name</th>
                                                         <th>Email</th>
                                                         <th>Contact</th>
@@ -236,6 +238,9 @@ session_start();
                                                         while($row = mysqli_fetch_array($result)){
                                                             echo "<tr>";
                                                         
+                                                            echo "<td>".$row['isActive']."</td>";
+                                                            echo "<td>".$row['user_timein']."</td>";
+                                                            echo "<td>".$row['user_timeout']."</td>";
                                                             echo "<td>".$row['name']."</td>";
                                                             echo "<td>".$row['email']."</td>";
                                                             echo "<td>".$row['contact']."</td>";

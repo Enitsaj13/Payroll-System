@@ -1,7 +1,6 @@
 <?php
 // include all the necessary files 
 include('../database/dbconnection.php');
-include('../logout.php');
 session_start();
 ?>
 <!DOCTYPE html>

@@ -126,7 +126,7 @@ session_start();
                         <li> <a class="waves-effect waves-dark" href="computation.php" aria-expanded="false">
                             <i class='bx bxs-report'></i><span class="hide-menu">Summary Reports</span></a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="index.php?logout='1'" aria-expanded="false">
+                        <li> <a class="waves-effect waves-dark" href="logout.php" aria-expanded="false">
                             <i class='bx bxs-log-out-circle'></i><span class="hide-menu">Sign out</span></a>
 
                         </li>

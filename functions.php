@@ -4,6 +4,7 @@
 include ('database/dbconnection.php');
 // session
 session_start();
+$_SESSION['userEmailCred'] = "";
 
 
 // variable declaration

@@ -1,6 +1,5 @@
 <?php
 include('../database/dbconnection.php');
-include('../logout.php');
 session_start();
 ?>
 <!DOCTYPE html>

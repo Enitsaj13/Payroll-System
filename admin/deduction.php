@@ -1,7 +1,6 @@
 <?php
 include('../database/dbconnection.php');
 include('../functions.php');
-include('../logout.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">

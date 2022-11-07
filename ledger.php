@@ -1,7 +1,6 @@
 <?php
 // includes all the files needed for the page
 include ('database/dbconnection.php');
-include('logout.php');
 include ('functions.php');
 
 ?>
@@ -127,7 +126,7 @@ include ('functions.php');
                             <i class='bx bx-columns'></i><span class="hide-menu">Ledger</span></a>
                         </li>
                         
-                        <li> <a class="waves-effect waves-dark" href="index.php?logout='1'" aria-expanded="false">
+                        <li> <a class="waves-effect waves-dark" href="logout.php" aria-expanded="false">
                             <i class='bx bxs-log-out-circle'></i><span class="hide-menu">Sign out</span></a>
                         
                     </ul>

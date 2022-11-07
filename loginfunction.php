@@ -5,7 +5,6 @@ include('functions.php');
 
 // login using email and password
 if (isset($_POST['submit'])) {
-
     $email = escape($_POST['email']);
     $password = escape($_POST['password']);
 
@@ -70,13 +69,21 @@ if (isset($_POST['submit'])) {
                 header('location: admin/home.php');		  
             } else {
                 
+                date_default_timezone_set('Asia/Manila');
+                $todays_date = date("y-m-d h:i:sa");
+                $query = 
+                "UPDATE employee 
+                SET user_timein='".$todays_date."', user_timeout='', isActive='Active' 
+                WHERE email='".$email."'";
+                mysqli_query($conn, $query);
                 $_SESSION['user'] = $logged_in_user;
                 $_SESSION['success']  = "You are now logged in. Welcome " . $_SESSION['user']['name'];
+
                 header('location: userspage.php');
             }
       
         } else {
-            $_SESSION['error'] = json_encode("Invalid username or password.");
+            $_SESSION['error'] = json_encode($_SESSION['userEmailCred']);//json_encode("Invalid username or password.");
         }
     }   
 }
