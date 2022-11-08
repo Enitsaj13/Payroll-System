@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 // include all the php files that are necessary for this page
 include('database/dbconnection.php');
 include('functions.php');
@@ -53,12 +53,13 @@ if (isset($_POST['submit'])) {
     //if (count($errors) == 0 && $response -> success == true) {
     if (count($errors) == 0) {
         
-        //$password = sha1($password); // encrypt the password before storing in the database
+        $password = sha1($password); // encrypt the password before storing in the database
         
         $query = "SELECT * FROM employee WHERE email='".$email."' AND password='".$password."';";
         $results = mysqli_query($conn, $query);
         //return $_SESSION['error'] = json_encode($results);
         if (mysqli_num_rows($results) == 1) { // user found in database
+
 
             // check if user is admin or user and put user data in session
             $logged_in_user = mysqli_fetch_assoc($results);
@@ -89,4 +90,4 @@ if (isset($_POST['submit'])) {
 }
 
 
-?>
+?> -->
