@@ -211,11 +211,10 @@ session_start();
                                             <a href="print_employee.php" class="btn btn-info m-2 pull-right">
                                             <i class='bx bx-printer'></i></a>
                                         </h5>
-                                            <form action="#" method="POST">    <!-- table for the list of user profile -->
+                                            <!--<form action="#" method="POST">-->    <!-- table for the list of user profile -->
                                                 <table id="EmployeeTable" class="display compact table-hover">
                                                 <thead>
                                                     <tr>
-    
                                                         <th>Status</th>
                                                         <th>Time-in</th>
                                                         <th>Time-out</th>
@@ -236,8 +235,10 @@ session_start();
                                                         $sql = "SELECT * FROM employee";
                                                         $result = mysqli_query($conn, $sql);
                                                         while($row = mysqli_fetch_array($result)){
+                                                            // modal for the edit, delete and add button -->
+                                                            include('edit_delete_add_modal.php');
                                                             echo "<tr>";
-                                                        
+                                                            
                                                             echo "<td>".$row['isActive']."</td>";
                                                             echo "<td>".$row['user_timein']."</td>";
                                                             echo "<td>".$row['user_timeout']."</td>";
@@ -249,26 +250,20 @@ session_start();
                                                             echo "<td>".$row['department']."</td>";
                                                             echo "<td>".$row['position']."</td>";
                                                             echo "<td>".$row['employee_type']."</td>";
-                                                            echo "<td>
-                                                            <!-- Button trigger modal -->
-
-
-                                                            <a href='#update".$row['id']."'class='btn btn-sm btn-success' ' data-toggle='modal'><i class='bx bxs-edit icon-edit'></i></a>
-                                                            <a href='#delete".$row['id']."'class='btn btn-sm btn-danger' data-toggle='modal'><i class='bx bxs-trash icon-del'></i></a>
                                                             
-                                                            </td>";
-                                                            "</tr>";
+                                                            echo "<td>";
+                                                            echo "<a href='#update".$row['id']."'class='btn btn-sm btn-success' data-toggle='modal'><i class='bx bxs-edit icon-edit'></i></a>";
+                                                            echo "<a href='#delete".$row['id']."'class='btn btn-sm btn-danger' data-toggle='modal'><i class='bx bxs-trash icon-del'></i></a>";
+                                                            echo "</td>";
 
-                                                            // modal for the edit, delete and add button -->
-
-                                                            include('edit_delete_add_modal.php');
+                                                            echo "</tr>";                                                          
                                                             
                                                         }             
 
                                                     ?>
                                             </tbody>
                                             </table>
-                                        </form>                                          <!-- end of table -->
+                                        <!--</form>-->                                          <!-- end of table -->
                                         </div>
                            
                 

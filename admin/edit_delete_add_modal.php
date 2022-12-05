@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/adminothers.css">
 </head>
 <body>
-    
+
 </body>
 </html>
 
@@ -25,7 +25,7 @@
       </div>
       <div class="modal-body">
       <div class="container-fluid">
-			<form method="GET" action="update.php">
+			<form method="GET" id="form<?php echo $row['id']; ?>" action="update.php">
 				<div class="row form-group">
 					<div class="col-sm-2">
 						<!-- newly added field -->
@@ -77,8 +77,8 @@
                             <option value="<?php echo $row['department']; ?>" readonly><?php echo $row['department']; ?></option>
                             <option value="IT Department">IT Department</option>
                             <option value="Accountant">Accountant</option>
-                            <option value="Sales">Sales</option> 
-                            <option value="Head Office">Head Office</option> 
+                            <option value="Sales">Sales</option>
+                            <option value="Head Office">Head Office</option>
                         </select>
 					</div>
 				</div>
@@ -101,7 +101,7 @@
                             <option value="Department Secretary">Department Secretary</option>
                             <option value="Office Clerk">Office Clerk</option>
                             <option value="Liaison">Liaison</option>
-                    
+
                         </select>
 					</div>
 				</div>
@@ -112,7 +112,7 @@
 					<div class="col-sm-10">
 						<select name="employee_type">
                             <option value="<?php echo $row['employee_type']; ?>" readonly><?php echo $row['employee_type']; ?></option>
-                            <option value="Regular">Regular</option> 
+                            <option value="Regular">Regular</option>
                         </select>
 					</div>
 				</div>
@@ -125,7 +125,7 @@
 					</div>
 				</div>
 			</div>
-		</div>		
+		</div>
 			<div class="modal-footer d-flex align-items-center justify-content-center">
 				<button type="button" class="btn btn-light" data-dismiss="modal"><i class='bx bx-window-close'></i> Cancel</button>
 				<button type="submit" name="update" class="btn btn-info"><i class='bx bx-save'></i> Update</button>
@@ -141,11 +141,11 @@
 <div class="modal fade" id="delete<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header bg-warning">	
+            <div class="modal-header bg-warning">
 					<h5 id="title-delete" class="modal-title text-light" id="myModalLabel">Delete Member</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
-            <div class="modal-body">	
+            <div class="modal-body">
             	<p class="text-center">Are you sure you want to delete</p>
 				<h2 class="text-center"><?php echo $row['name']; ?> ?</h2>
 			</div>
@@ -157,9 +157,3 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-

@@ -208,7 +208,7 @@ session_start();
                                         <h5 class="card-title mb-0">
                                         
                                         </h5>
-                                            <form action="#" method="POST">    <!-- table for the list of user profile -->
+                                            <!--<form action="#" method="POST">-->    <!-- table for the list of user profile -->
                                                 <table id="EmployeeTable" class="display compact table-hover">
                                                 <thead>
                                                     <tr>
@@ -247,7 +247,7 @@ session_start();
                                                     ?>
                                             </tbody>
                                             </table>
-                                        </form>                                          <!-- end of table -->
+                                        <!--</form>-->                                          <!-- end of table -->
                                         </div>
                            
                 

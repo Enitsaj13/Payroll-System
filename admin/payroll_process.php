@@ -8,6 +8,8 @@ session_start();
 if (isset($_GET['save'])) {
 
     // get the input from the user
+    date_default_timezone_set('Asia/Kolkata'); 
+    $period = date("Y-m-d");
     $name = $_GET['name'];
     $department = $_GET['department'];
     $position = $_GET['position'];
@@ -108,7 +110,7 @@ if (isset($_GET['save'])) {
     // check if the input is valid
     if (empty($_SESSION['error'])) {
         // insert the input into the database
-        $sql = "INSERT INTO payroll_process (name, department, position, rate, day_work, overtime, late, leave_number, absence, grosspay, deductions, netpay) VALUES ('$name', '$department', '$position', '$rate', '$day_work', '$overtime', '$late', '$leave_number', '$absence', '$grosspay', $deductions, '$netpay')";
+        $sql = "INSERT INTO payroll_process (pay_period, name, department, position, rate, day_work, overtime, late, leave_number, absence, grosspay, deductions, netpay) VALUES ('$period', '$name', '$department', '$position', '$rate', '$day_work', '$overtime', '$late', '$leave_number', '$absence', '$grosspay', $deductions, '$netpay')";
         $result = mysqli_query($conn, $sql);
         if ($result) {
             // success

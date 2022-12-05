@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
     //if (count($errors) == 0 && $response -> success == true) {
     if (count($errors) == 0) {
         
-        $password = sha1($password); // encrypt the password before storing in the database
+        //$password = sha1($password); // encrypt the password before storing in the database
         
         $query = "SELECT * FROM employee WHERE email='".$email."' AND password='".$password."';";
         $results = mysqli_query($conn, $query);

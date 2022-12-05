@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 05, 2022 at 06:10 PM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Host: 127.0.0.1:3306
+-- Generation Time: Nov 07, 2022 at 07:00 PM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 8.0.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -86,13 +86,13 @@ CREATE TABLE `employee` (
 --
 
 INSERT INTO `employee` (`id`, `name`, `email`, `contact`, `address`, `date_hired`, `department`, `position`, `employee_type`, `user_type`, `password`, `image_upload`, `verify_token`, `user_timein`, `user_timeout`, `isActive`) VALUES
-(2, 'Vernice Burgwyn', 'vburgwyn1@simplemachines.com', 2609817203, '520 Lyons Park', '2022-07-08', 'Sales', 'Sales Manager', 'Contractual', 'user', '12345', '', '', '22-12-06 12:56:38am', '22-12-06 12:57:17am', 'InActive'),
-(3, 'Emmey Poleyes', 'epoleye2@auda.org.au', 8486368705, '525 Esch Road', '2022-07-08', 'IT Department', 'Programmer', 'Contractual', 'user', '12345', '', '', '', '', ''),
-(4, 'Waldemar Philot', 'wphilot3@paginegialle.it', 7647537919, '4 Alpine Parkway', '2022-07-08', 'IT Department', 'Encoder', 'Regular', 'user', '12345', '', '', '', '', ''),
-(5, 'Hector Kretchmer', 'hkretchmer4@pagesperso-orange.fr', 2744885918, '7201 Burrows Center', '2022-07-08', 'Sales', 'Sales Manager', 'Consultant', 'user', '12345', '', '', '', '', ''),
-(7, 'Johnette Learmont', 'jlearmont6@networkadvertising.org', 6561439113, '94 Almo Pass', '2022-07-08', 'Head Office', 'Department Secretary', 'Contractual', 'user', '12345', '', '', '', '', ''),
-(8, 'Dulcine Nendick', 'dnendick7@youku.com', 2082810409, '35 Dennis Crossing', '2022-07-08', 'Head Office', 'Office Clerk', 'Regular', 'user', '12345', '', '', '', '', ''),
-(9, 'Tuckie Pickover', 'tpickover8@tinyurl.com', 5456733842, '92 Dixon Trail', '2022-07-08', 'Accountant', 'Junior Accountant', 'Regular', 'user', '12345', '', '', '', '', ''),
+(2, 'Vernice Burgwyn', 'vburgwyn1@simplemachines.org', 2609817203, '520 Lyons Park', '2022-07-08', 'Sales', 'Sales Manager', 'Contractual', 'user', '12345	', '', '', '', '', ''),
+(3, 'Emmey Poleyes', 'epoleye2@auda.org.au', 8486368705, '525 Esch Road', '2022-07-08', 'IT Department', 'Programmer', 'Contractual', 'user', '12345	', '', '', '', '', ''),
+(4, 'Waldemar Philot', 'wphilot3@paginegialle.it', 7647537919, '4 Alpine Parkway', '2022-07-08', 'IT Department', 'Encoder', 'Regular', 'user', '12345	', '', '', '', '', ''),
+(5, 'Hector Kretchmer', 'hkretchmer4@pagesperso-orange.fr', 2744885918, '7201 Burrows Center', '2022-07-08', 'Sales', 'Sales Manager', 'Consultant', 'user', '12345	', '', '', '', '', ''),
+(7, 'Johnette Learmont', 'jlearmont6@networkadvertising.org', 6561439113, '94 Almo Pass', '2022-07-08', 'Head Office', 'Department Secretary', 'Contractual', 'user', '12345	', '', '', '', '', ''),
+(8, 'Dulcine Nendick', 'dnendick7@youku.com', 2082810409, '35 Dennis Crossing', '2022-07-08', 'Head Office', 'Office Clerk', 'Regular', 'user', '12345	', '', '', '', '', ''),
+(9, 'Tuckie Pickover', 'tpickover8@tinyurl.com', 5456733842, '92 Dixon Trail', '2022-07-08', 'Accountant', 'Junior Accountant', 'Regular', 'user', '12345	', '', '', '', '', ''),
 (11, 'Michaela McCrie', 'mmccriea@dmoz.org', 6096314595, '7968 Northwestern Center', '2022-07-08', 'Sales', 'Office Clerk', 'Part-time', 'user', '12345', '', '', '', '', ''),
 (12, 'Isabeau Wardhaw', 'iwardhawb@wix.com', 8575501722, '0 Hollow Ridge Plaza', '2022-07-08', 'Accountant', 'Head Accountant', 'Regular', 'user', '12345', '', '', '', '', ''),
 (13, 'Otis Montilla', 'omontillac@spotify.com', 9891032637, '48865 Spenser Hill', '2022-07-08', 'Accountant', 'Head Accountant', 'Contractual', 'user', '12345', '', '', '', '', ''),
@@ -105,17 +105,17 @@ INSERT INTO `employee` (`id`, `name`, `email`, `contact`, `address`, `date_hired
 (20, 'Katrine Gerrietz', 'kgerrietzj@slideshare.net', 6461313846, '2236 Scofield Center', '2022-07-08', 'Accountant', 'Head Accountant', 'Part-time', 'user', '12345', '', '', '', '', ''),
 (21, 'Carlie Fydo', 'cfydok@instagram.com', 7181826072, '308 Maryland Pass', '2022-07-08', 'Sales', 'Sales Manager', 'Regular', 'user', '12345', '', '', '', '', ''),
 (22, 'Tomasina Cissen', 'tcissenl@un.org', 2061914656, '35369 Gina Point', '2022-07-08', 'Head Office', 'Liaison', 'Contractual', 'user', '12345', '', '', '', '', ''),
-(23, 'Arman Hagues', 'abartalim@icio.us', 4767442439, '99011 Arizona Pass', '2022-07-08', 'IT Department', 'Designer', 'Regular', 'user', '12345', '', '', '22-12-06 01:06:49am', '', 'Active'),
+(23, 'Armand Bartalis', 'abartalim@icio.us', 4767442439, '99011 Arizona Pass', '2022-07-08', 'IT Department', 'Designer', 'Regular', 'user', '12345', '', '', '', '', ''),
 (24, 'Frazier Sugar', 'fsugarn@earthlink.net', 3033251743, '97 Manufacturers Avenue', '2022-07-08', 'Accountant', 'Head Accountant', 'Contractual', 'user', '12345', '', '', '', '', ''),
 (25, 'Thadeus Dunkerton', 'tdunkertono@drupal.org', 9954143907, '7680 Sycamore Place', '2022-07-08', 'IT Department', 'Designer', 'Regular', 'user', '12345', '', '', '', '', ''),
 (26, 'Ciro Maior', 'cmaiorp@toplist.cz', 2095411599, '6 Meadow Ridge Alley', '2022-07-08', 'Head Office', 'Office Clerk', 'Regular', 'user', '12345', '', '', '', '', ''),
 (27, 'Drona Riccetti', 'qwerty@gmail.com', 6113036779, '45017 Ridgeway Trail', '2022-07-08', 'Sales', 'Junior Accountant', 'Part-time', 'admin', 'qwerty', '', '', '', '', ''),
-(28, 'Callida Jaggs', 'cjaggsr@bluehost.com', 2366523803, '23148 Hazelcrest Drive', '2022-07-08', 'Head Office', 'Liaison', 'Regular', 'user', '12345', '', '', '22-11-07 01:59:12pm', '22-11-07 01:59:47pm', 'InActive'),
+(28, 'Callida Jaggs', 'cjaggsr@bluehost.com', 2366523803, '23148 Hazelcrest Drive', '2022-07-08', 'Head Office', 'Liaison', 'Regular', 'user', 'qwerty', '', '', '22-11-07 01:59:12pm', '22-11-07 01:59:47pm', 'InActive'),
 (29, 'Stacia Polson', 'spolsons@amazonaws.com', 3763023946, '06 Westend Circle', '2022-07-08', 'IT Department', 'Encoder', 'Regular', 'user', '12345', '', '', '', '', ''),
 (30, 'Kim Skegg', 'kskeggt@blinklist.com', 5143220493, '97 Fairview Trail', '2022-07-08', 'Sales', 'DB Admin', 'Part-time', 'user', '12345', '', '', '', '', ''),
 (31, 'Free Perrot', 'fperrotu@hc360.com', 7625104253, '58740 Morningstar Pass', '2022-07-08', 'Sales', 'Sales Representative', 'Regular', 'user', '12345', '', '', '', '', ''),
 (32, 'Baxter Rosson', 'brossonv@4shared.com', 4346172625, '6796 Summit Lane', '2022-07-12', 'Accountant', 'Head Accountant', 'Regular', 'user', '12345', '', '', '', '', ''),
-(33, 'Jerry O Kinedy', 'jokinedyw@usda.gov', 8497236588, '1973 Corry Junction', '2022-07-21', 'Sales', 'Sales Representative', 'Contractual', 'user', '12345', '', '', '', '', ''),
+(33, 'Jerry O\'Kinedy', 'jokinedyw@usda.gov', 8497236588, '1973 Corry Junction', '2022-07-21', 'Sales', 'Sales Representative', 'Contractual', 'user', '12345', '', '', '', '', ''),
 (34, 'Marcellina Ghilardini', 'mghilardinix@latimes.com', 7591148947, '42391 Kedzie Point', '2022-07-03', 'IT Department', 'DB Admin', 'Consultant', 'user', '12345', '', '', '', '', ''),
 (35, 'Hannah Melville', 'hmelvilley@tinypic.com', 3873052454, '1 Manitowish Hill', '2022-07-02', 'Accountant', 'Junior Accountant', 'Regular', 'user', '12345', '', '', '', '', ''),
 (37, 'Jessika Kissack', 'jkissack10@bloomberg.com', 2314960414, '8 Summerview Drive', '2022-07-08', 'Head Office', 'Office Clerk', 'Part-time', 'user', '12345', '', '', '', '', ''),
@@ -131,12 +131,12 @@ INSERT INTO `employee` (`id`, `name`, `email`, `contact`, `address`, `date_hired
 (48, 'Saundra Metschke', 'smetschke1b@amazon.co.uk', 5472727115, '95 Arizona Place', '2022-07-08', 'Head Office', 'Liaison', 'Contractual', 'user', '12345', '', '', '', '', ''),
 (49, 'Hilliary Linebarger', 'hlinebarger1c@bigcartel.com', 7116302620, '33758 Jackson Avenue', '2022-07-12', 'Accountant', 'Liaison', 'Consultant', 'user', '12345', '', '', '', '', ''),
 (50, 'Carissa Storrah', 'cstorrah1d@ow.ly', 1258423492, '025 David Drive', '2022-07-08', 'Sales', 'Sales Manager', 'Regular', 'user', '12345', '', '', '', '', ''),
-(52, 'asfasf', 'asfasf@gmail.com', 954645642, 'dsfsdfds', '2022-07-13', 'IT Department', 'Designer', 'Regular', 'user', '12345', 'tiger.jpg', '', '', '', ''),
+(52, 'asfasf', 'asfasf@gmail.com', 954645642, 'dsfsdfds', '2022-07-13', 'IT Department', 'Designer', 'Regular', 'user', 'de0eea1b2131b85e34ee465704623cf04960e9b0', 'tiger.jpg', '', '', '', ''),
 (53, 'Vice Ganda', 'ViceGanda@gmail.com', 987434212, '122 Francisco Baltazar', '2022-07-12', 'Accountant', 'Head Accountant', 'Contractual', 'user', 'e1e6668fd21e9141cb208f30bb25bf5816e774e3', 'w3logo.jpg', '', '', '', ''),
 (54, 'Rhiana Rosas', 'Reyana@gmail.com', 915438762, 'Malabon City 123', '2022-07-07', 'Accountant', 'Head Accountant', 'Contractual', 'user', 'f48bb9239978ab8f8952b0fd248b3e6514e938e1', 'signature.png', '', '', '', ''),
 (55, 'dsfsdfdsfsd sdfsdfsd', 'jaicaformentera@gmail.com', 987434214, 'malabon city', '2022-07-16', 'Sales', 'Sales Representative', 'Contractual', 'user', '3b41572405aed9fe7ad762090f739b1c4a42942e', 'sc.jpg', '', '', '', ''),
 (56, 'Eli Soriano', 'elisoriano@gmail.com', 987434243, '123 Apalit', '2022-07-11', 'Head_Office', 'Department Secretary', 'Regular', 'user', '792503ebcd8bff2e14b3b8de94a33505e2054241', 'broeli.jpg', '', '', '', ''),
-(59, 'Jastine Formentera', 'jastine13@gmail.com', 987434214, 'malabon city', '2022-07-01', 'IT_Department', 'Programmer', 'Regular', 'admin', 'jastine13', 'james.jpg', '', '', '', ''),
+(59, 'Jastine Formentera', 'jastine13@gmail.com', 987434214, 'malabon city', '2022-07-01', 'IT_Department', 'Programmer', 'Regular', 'admin', '4a63d69061b869b245610447dd31e6d3b855b3a7', 'james.jpg', '', '', '', ''),
 (60, 'Payrol System', 'payroll.system2k22@gmail.com', 987434212, '122 Francisco Baltazar', '2022-07-07', 'IT_Department', 'Programmer', 'Regular', 'user', '8cb2237d0679ca88db6464eac60da96345513964', 'payroll.png', '43390da65a2c49797e94f15f6cae524a', '', '', '');
 
 -- --------------------------------------------------------
@@ -147,7 +147,6 @@ INSERT INTO `employee` (`id`, `name`, `email`, `contact`, `address`, `date_hired
 
 CREATE TABLE `payroll_process` (
   `id` int(20) NOT NULL,
-  `pay_period` date DEFAULT NULL,
   `name` varchar(50) NOT NULL,
   `department` varchar(50) NOT NULL,
   `position` varchar(50) NOT NULL,
@@ -166,11 +165,9 @@ CREATE TABLE `payroll_process` (
 -- Dumping data for table `payroll_process`
 --
 
-INSERT INTO `payroll_process` (`id`, `pay_period`, `name`, `department`, `position`, `rate`, `day_work`, `overtime`, `late`, `leave_number`, `absence`, `grosspay`, `deductions`, `netpay`) VALUES
-(39, '2022-11-05', 'Arman Hagues', 'IT Department', 'Programmer', 2000, 15, 1, 1, 1, 1, 30400, 8293, 22107),
-(40, '2022-12-05', 'Arman Hagues', 'IT Department', 'Programmer', 2000, 16, 4, 3, 1, 1, 33600, 9087, 24513),
-(45, '2022-11-05', 'Vernice Burgwyn', 'Sales', 'Sales Manager', 3500, 15, 4, 0, 5, 2, 54100, 24947, 29153),
-(46, '2022-12-05', 'Vernice Burgwyn', 'Sales', 'Sales Manager', 3500, 20, 8, 0, 2, 0, 73200, 15944, 57256);
+INSERT INTO `payroll_process` (`id`, `name`, `department`, `position`, `rate`, `day_work`, `overtime`, `late`, `leave_number`, `absence`, `grosspay`, `deductions`, `netpay`) VALUES
+(39, 'Arman Hagues', 'IT Department', 'Programmer', 2000, 15, 1, 1, 1, 1, 30400, 8293, 22107),
+(40, 'Arman Hagues', 'IT Department', 'Programmer', 2000, 16, 4, 3, 1, 1, 33600, 9087, 24513);
 
 --
 -- Indexes for dumped tables
@@ -226,7 +223,7 @@ ALTER TABLE `employee`
 -- AUTO_INCREMENT for table `payroll_process`
 --
 ALTER TABLE `payroll_process`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

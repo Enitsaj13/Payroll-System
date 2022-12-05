@@ -202,13 +202,14 @@ include ('functions.php');
                             <div class="table-responsive-md bg-white">
                                     
                                         <h5 class="card-title mb-0">
-                                            
+                                            <a href="./print2.php" class="btn btn-info m-2 pull-right">
+                                            <i class='bx bx-printer'></i></a>
                                         </h5>
                                             <form action="#" method="POST">    <!-- table for the list of user profile -->
                                                 <table id="EmployeeTable" class="display compact table-hover">
                                                 <thead>
                                                     <tr>
-                                                        <th>Name</th>
+                                                        <th>Pay Period</th>
                                                         <th>Rate</th>
                                                         <th>Days Work</th>
                                                         <th>Overtime</th>
@@ -218,17 +219,30 @@ include ('functions.php');
                                                         <th>Gross Pay</th>
                                                         <th>Deductions</th>
                                                         <th>Net Pay</th>
-                                                        <th>Action</th>
-
-
                                                     </tr>
+                                                    
                                                 </thead>
                                                 <tbody>
-                                                <?php
-                                                                     
-
+                                                    <?php
+                                                    $sql = "SELECT * FROM payroll_process WHERE name = '".$_SESSION['user']['name']."';";
+                                                    $result = mysqli_query($conn, $sql);
+                                                    while($row = mysqli_fetch_array($result)){
+                                                        $fdate = date_format(date_create($row['pay_period']),"Y-m");
+                                                        echo "<tr>";
+                                                        echo "<td>".$fdate."</td>";
+                                                        echo "<td>".$row['rate']."</td>";
+                                                        echo "<td>".$row['day_work']."</td>";
+                                                        echo "<td>".$row['overtime']."</td>";
+                                                        echo "<td>".$row['late']."</td>";
+                                                        echo "<td>".$row['leave_number']."</td>";
+                                                        echo "<td>".$row['absence']."</td>";
+                                                        echo "<td>".$row['grosspay']."</td>";
+                                                        echo "<td>".$row['deductions']."</td>";
+                                                        echo "<td>".$row['netpay']."</td>";
+                                                        echo "</tr>";
+                                                    }
                                                     ?>
-                                            </tbody>
+                                                </tbody>
                                             </table>
                                         </form>                                          <!-- end of table -->
                                         </div>

@@ -213,6 +213,7 @@ session_start();
                                                 <table id="EmployeeTable" class="display compact table-hover">
                                                 <thead>
                                                     <tr>
+                                                        <th>PAY PERIOD</th>
                                                         <th>NAME</th>
                                                         <th>RATE</th>
                                                         <th>DAYWORK</th>        
@@ -239,7 +240,9 @@ session_start();
                                                         $sql = "SELECT * FROM payroll_process";
                                                         $result = mysqli_query($conn, $sql);
                                                         while($row = mysqli_fetch_array($result)){
+                                                            $fdate = date_format(date_create($row['pay_period']),"Y-m");
                                                             echo "<tr>";
+                                                            echo "<td>".$fdate."</td>";
                                                             echo "<td>".$row['name']."</td>";
                                                             echo "<td>".$row['rate']."</td>";
                                                             echo "<td>".$row['day_work']."</td>";

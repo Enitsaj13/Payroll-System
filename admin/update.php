@@ -5,7 +5,7 @@ session_start();
 
     // edit the user details
     if (isset($_GET['update'])) {
-
+        
         $id = $_GET['id'];
         $name = $_GET['name'];
         $email = $_GET['email'];
