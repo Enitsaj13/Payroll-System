@@ -26,13 +26,12 @@ include('cookie.php');
     <!-- recaptcha -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-  
   </head>
   <body>
     
   <style>
     .g-recaptcha {
-      margin-top: 3rem;
+      margin-top: -1rem;
     }
 
     .create-text {
@@ -73,7 +72,8 @@ include('cookie.php');
 
     .bxs-right-arrow {
         position: relative;
-        top: 1px;
+        bottom: 28px;
+        left: 150px;
     }
 
     #error {
@@ -170,9 +170,7 @@ include('cookie.php');
               </a>
             </div>
            
-
-            
-            <!-- <div class="g-recaptcha" data-sitekey="6LflAwMhAAAAAEt6Ubaak_BnxKACvlnD6Mnkv8vB"></div> -->
+            <div class="g-recaptcha" data-sitekey="6LflAwMhAAAAAEt6Ubaak_BnxKACvlnD6Mnkv8vB"></div>
           </form>
         </div>
       </div>

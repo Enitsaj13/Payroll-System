@@ -5,6 +5,7 @@ include('functions.php');
 
 // login using email and password
 if (isset($_POST['submit'])) {
+
     $email = escape($_POST['email']);
     $password = escape($_POST['password']);
 
@@ -15,7 +16,7 @@ if (isset($_POST['submit'])) {
     }
 
     // Storing google recaptcha response in $recaptcha variable
-    //$recaptcha = $_POST['g-recaptcha-response'];
+    $recaptcha = $_POST['g-recaptcha-response'];
 
     if (empty($email)) {
         $_SESSION['error'] = "Email is required.";
@@ -26,9 +27,7 @@ if (isset($_POST['submit'])) {
     } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $_SESSION['error'] = "Invalid email format.";
 
-    }
-    //Gotta turn off the annoying captcha;
-    /*else if ($recaptcha == '') {
+    } else if ($recaptcha == '') {
         $_SESSION['error'] = "Please check the captcha.";
     }
 
@@ -46,14 +45,12 @@ if (isset($_POST['submit'])) {
   
     // Response return by google is in
     // JSON format, so we have to parse that json
-    $response = json_decode($response);*/
+    $response = json_decode($response);
 
     // if no error in the captcha and the validation, then login the user
-    //Old if including captcha;
-    //if (count($errors) == 0 && $response -> success == true) {
-    if (count($errors) == 0) {
+    if (count($errors) == 0 && $response -> success == true) {
         
-        //$password = sha1($password); // encrypt the password before storing in the database
+        $password = sha1($password);// encrypt the password before storing in the database
         
         $query = "SELECT * FROM employee WHERE email='".$email."' AND password='".$password."';";
         $results = mysqli_query($conn, $query);
