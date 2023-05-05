@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
 
   
     // secret key for google recaptcha
-    $secret_key = '6LfblfMgAAAAABFTywpZKkqZV5-dR28LKv4epfPA';
+    $secret_key = '6Le2Y_okAAAAAG58bH7Lrc21OxgZtVQlMErOelBD';
   
     // Hitting request to the URL, Google will
     // respond with success or error scenario

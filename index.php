@@ -170,7 +170,7 @@ include('cookie.php');
               </a>
             </div>
            
-            <div class="g-recaptcha" data-sitekey="6LflAwMhAAAAAEt6Ubaak_BnxKACvlnD6Mnkv8vB"></div>
+            <div class="g-recaptcha" data-sitekey="6Le2Y_okAAAAABNRzWn9DEKo7hYqEXmeaiYiWncc"></div>
           </form>
         </div>
       </div>
